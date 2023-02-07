@@ -1,4 +1,19 @@
+// rest operators array
 const fruits = ["passion fruit", "apple", "strawberry", "banana"];
-const [first, ...rest] = fruits;
+const [first, second, ...restOfTheFruits] = fruits;
+console.log(first, second, restOfTheFruits);
 
-console.log(first, rest);
+const specificFruit = restOfTheFruits.find((fruit) => {
+  return fruit === "strawberry";
+});
+console.log(specificFruit);
+
+// rest operator objects
+const person = {
+  name: "gene",
+  lastName: "belcher",
+  job: "burger boy",
+};
+
+const { job, ...rest } = person;
+console.log(job, rest);
