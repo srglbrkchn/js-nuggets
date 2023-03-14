@@ -12,3 +12,12 @@ const people = [
     location: { street: "4478 Brick Kiln Road", timezone: { offset: "+5:45" } },
   },
 ];
+
+people.forEach((person) => {
+  // use && operator
+  console.log(
+    person.location &&
+      person.location.timezone &&
+      person.location.timezone.offset
+  );
+});
