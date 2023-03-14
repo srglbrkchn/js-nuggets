@@ -16,8 +16,9 @@ const people = [
 people.forEach((person) => {
   // use && operator
   console.log(
-    person.location &&
+    (person.location &&
       person.location.timezone &&
-      person.location.timezone.offset
+      person.location.timezone.offset) ||
+      "+8:30"
   );
 });
